@@ -37,12 +37,12 @@ trait Utils
 
     /**
      * Execute method.
-     * @param $requestMethod
+     * @param string $requestMethod
      * @param string $apiMethod
      * @param array $data
      * @return array
      */
-    protected function exec($requestMethod, string $apiMethod, array $data = null):array
+    protected function exec(string $requestMethod, string $apiMethod, array $data = null):array
     {
         try {
             if ($this->useAuth) {

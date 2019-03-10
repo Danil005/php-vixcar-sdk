@@ -4,6 +4,7 @@ namespace VixCarSdk;
 
 use VixCarSdk\Methods\Auth;
 use Curl\Curl;
+use VixCarSdk\Methods\Cars;
 use VixCarSdk\Methods\Services;
 
 class Client
@@ -28,18 +29,42 @@ class Client
         }
     }
 
+    /**
+     * Get path api.
+     * @return string
+     */
     public function getPath():string
     {
         return $this->path;
     }
 
+    /**
+     * Return Auth class.
+     *
+     * @return Auth
+     */
     public function auth():Auth
     {
         return new Auth($this->clientId, $this->clientToken, $this->path, $this->curl);
     }
 
+    /**
+     * Return Services class.
+     *
+     * @return Services
+     */
     public function services():Services
     {
         return new Services($this->clientId, $this->clientToken, $this->path, $this->curl);
+    }
+
+    /**
+     * Return Services class.
+     *
+     * @return Cars
+     */
+    public function cars():Cars
+    {
+        return new Cars($this->clientId, $this->clientToken, $this->path, $this->curl);
     }
 }
