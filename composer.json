@@ -1,0 +1,20 @@
+{
+    "name": "fiks/vixcar-sdk",
+    "require": {
+        "php-curl-class/php-curl-class": "^8.5",
+        "php":">=7.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Danil S",
+            "email": "danilsidorenko00@bk.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": {
+            "VixCarSdk": "src/"
+        }
+    }
+}
