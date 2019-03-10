@@ -2,6 +2,7 @@
 
 namespace VixCarSdk;
 
+use VixCarSdk\Methods\Account;
 use VixCarSdk\Methods\Auth;
 use Curl\Curl;
 use VixCarSdk\Methods\Booking;
@@ -89,6 +90,17 @@ class Client
     {
         return new History($this->clientId, $this->clientToken, $this->path, $this->curl);
     }
+
+    /**
+     * Return Account class.
+     *
+     * @return Account
+     */
+    public function account():Account
+    {
+        return new Account($this->clientId, $this->clientToken, $this->path, $this->curl);
+    }
+
 
 
 }
