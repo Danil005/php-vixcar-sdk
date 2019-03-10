@@ -1,5 +1,5 @@
 {
-    "name": "fiks/vixcar-sdk",
+    "name": "Danil005/php-vixcar-sdk",
     "require": {
         "php-curl-class/php-curl-class": "^8.5",
         "php":">=7.1"
