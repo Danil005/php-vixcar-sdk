@@ -11,14 +11,14 @@
      * [Auth](https://github.com/Danil005/php-vixcar-sdk#auth)
           - [login](https://github.com/Danil005/php-vixcar-sdk#auth--login)
           - [logout](https://github.com/Danil005/php-vixcar-sdk#auth--logout)
-          - [enter link description here](https://github.com/Danil005/php-vixcar-sdk#auth--join)join
+          - [join](https://github.com/Danil005/php-vixcar-sdk#auth--join)
      * [Services](https://github.com/Danil005/php-vixcar-sdk#services)
           - [get](https://github.com/Danil005/php-vixcar-sdk#services--get)
           - [count](https://github.com/Danil005/php-vixcar-sdk#services--count)
           - [price](https://github.com/Danil005/php-vixcar-sdk#services--price)
      * [Cars](https://github.com/Danil005/php-vixcar-sdk#cars)
           - [get](https://github.com/Danil005/php-vixcar-sdk#cars--get)
-          - [enter link description here](https://github.com/Danil005/php-vixcar-sdk#cars--create)create
+          - [create](https://github.com/Danil005/php-vixcar-sdk#cars--create)
           - [delete](https://github.com/Danil005/php-vixcar-sdk#cars--delete)
           - [update](https://github.com/Danil005/php-vixcar-sdk#cars--update)
           - [count](https://github.com/Danil005/php-vixcar-sdk#cars--count)
