@@ -4,6 +4,7 @@ namespace VixCarSdk;
 
 use VixCarSdk\Methods\Auth;
 use Curl\Curl;
+use VixCarSdk\Methods\Booking;
 use VixCarSdk\Methods\Cars;
 use VixCarSdk\Methods\Services;
 
@@ -66,5 +67,15 @@ class Client
     public function cars():Cars
     {
         return new Cars($this->clientId, $this->clientToken, $this->path, $this->curl);
+    }
+
+    /**
+     * Return Booking class.
+     *
+     * @return Booking
+     */
+    public function booking():Booking
+    {
+        return new Booking($this->clientId, $this->clientToken, $this->path, $this->curl);
     }
 }
