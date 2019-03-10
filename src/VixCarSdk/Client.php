@@ -6,6 +6,7 @@ use VixCarSdk\Methods\Auth;
 use Curl\Curl;
 use VixCarSdk\Methods\Booking;
 use VixCarSdk\Methods\Cars;
+use VixCarSdk\Methods\History;
 use VixCarSdk\Methods\Services;
 
 class Client
@@ -78,4 +79,16 @@ class Client
     {
         return new Booking($this->clientId, $this->clientToken, $this->path, $this->curl);
     }
+
+    /**
+     * Return History class.
+     *
+     * @return History
+     */
+    public function history():History
+    {
+        return new History($this->clientId, $this->clientToken, $this->path, $this->curl);
+    }
+
+
 }

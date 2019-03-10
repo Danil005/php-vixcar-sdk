@@ -8,4 +8,4 @@ $token = "eyJ0eXBlIjoiVXNlciBBY2Nlc3MgVG9rZW4iLCJhbGciOiJiYXNlNjQifS57ImlzcyI6Im
 $client = new Client(2, $token, 'http://carplace.ru/api/v1');
 
 echo "<pre>";
-print_r($client);
+print_r($client->history()->count());
