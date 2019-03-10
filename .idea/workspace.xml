@@ -24,13 +24,13 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="json" value="3" />
+          <entry key="json" value="4" />
           <entry key="php" value="68" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="3" />
+          <entry key="JSON" value="4" />
           <entry key="PHP" value="68" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
@@ -39,13 +39,13 @@
         <counts>
           <entry key="dummy" value="14" />
           <entry key="gitignore" value="13" />
-          <entry key="json" value="59" />
+          <entry key="json" value="60" />
           <entry key="php" value="7666" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="59" />
+          <entry key="JSON" value="60" />
           <entry key="PHP" value="7666" />
           <entry key="PLAIN_TEXT" value="27" />
         </counts>
@@ -79,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="23">
-              <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+              <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -208,12 +208,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552230632926</updated>
-      <workItem from="1552230634553" duration="12340000" />
+      <workItem from="1552230634553" duration="12412000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12340000" />
+    <option name="totallyTimeSpent" value="12412000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
@@ -401,7 +401,7 @@
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
-          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
         </state>
       </provider>
     </entry>
