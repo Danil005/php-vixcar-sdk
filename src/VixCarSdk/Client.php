@@ -4,6 +4,7 @@ namespace VixCarSdk;
 
 use VixCarSdk\Methods\Auth;
 use Curl\Curl;
+use VixCarSdk\Methods\Services;
 
 class Client
 {
@@ -34,6 +35,11 @@ class Client
 
     public function auth():Auth
     {
-        return new Auth($this->clientId, $this->clientToken, $this->path);
+        return new Auth($this->clientId, $this->clientToken, $this->path, $this->curl);
+    }
+
+    public function services():Services
+    {
+        return new Services($this->clientId, $this->clientToken, $this->path, $this->curl);
     }
 }

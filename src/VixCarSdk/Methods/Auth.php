@@ -6,9 +6,30 @@ use Curl\Curl;
 use VixCarSdk\Client;
 use VixCarSdk\Utils;
 
-class Auth extends Client
+class Auth
 {
     use Utils;
+
+    private $methodName = 'auth';
+    private $fullPath, $clientId, $clientToken, $curl;
+
+    public function __construct(int $clientId, string $clientToken, string $path, Curl $curl)
+    {
+        $this->clientId = $clientId;
+        $this->clientToken = $clientToken;
+        $this->curl = $curl;
+        $this->fullPath = $path . '/' . $this->methodName . '.';
+    }
+
+    /**
+     * Select Method
+     * @param string $method
+     * @return string
+     */
+    private function method(string $method):string
+    {
+        return $this->fullPath . $method;
+    }
 
     /**
      * Send request to login.
@@ -20,39 +41,30 @@ class Auth extends Client
      */
     public function login(string $username, string $password): array
     {
-        try {
-            $this->curl->post($this->path . '/auth.login', [
-                'username' => $username,
-                'password' => $password,
-                'client_id' => $this->clientId
-            ]);
-        } catch (\ErrorException $e) {
-            echo Utils::$serverNotAnswer;
-        }
-
-        return $this->getResponse();
+        return $this->exec('POST', 'login', [
+            'username' => $username,
+            'password' => $password,
+            'client_id' => $this->clientId
+        ]);
     }
 
     /**
      * Send request to logout.
+     * @method POST
+     *
      * @return array
      */
     public function logout(): array
     {
-        try {
-            $this->curl->setHeader('Authorization', 'Bearer ' . $this->clientToken);
-
-            $this->curl->post($this->path . '/auth.logout');
-        } catch (\ErrorException $e) {
-            echo Utils::$serverNotAnswer;
-        }
-
-        return $this->getResponse();
+        $this->useAuth();
+        return $this->exec('POST', 'logout');
     }
 
 
     /**
      * Send request to join.
+     * @method PUT
+     *
      * @param string $username
      * @param string $password
      * @param string $email
@@ -71,20 +83,14 @@ class Auth extends Client
         string $middleName,
         string $numberPhone
     ): array {
-        try {
-            $this->curl->put($this->path . '/auth.join', [
-                'username' => $username,
-                'password' => $password,
-                'email' => $email,
-                'name' => $name,
-                'surname' => $surname,
-                'middle_name' => $middleName,
-                'number_phone' => $numberPhone
-            ]);
-        } catch (\ErrorException $e) {
-            echo Utils::$serverNotAnswer;
-        }
-
-        return $this->getResponse();
+        return $this->exec('POST', 'join', [
+            'username' => $username,
+            'password' => $password,
+            'email' => $email,
+            'name' => $name,
+            'surname' => $surname,
+            'middle_name' => $middleName,
+            'number_phone' => $numberPhone
+        ]);
     }
 }
